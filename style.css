@@ -1,0 +1,28 @@
+
+.header-1{
+	padding:0.1em;
+    color:white;
+    background-color:#337ab7;
+    clear:left;
+}
+
+.table1{
+	width:100%;
+	font-size:15px;
+}
+
+.table1 td
+{   
+   padding:5px 0px 5px 0px;
+}
+
+.output{
+	padding:5px 25px 5px 25px;
+}
+
+.statement{
+    font-size:10px
+}
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>混凝土梁配筋计算</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+    <script src="myScript.js" type="text/javascript"></script>
+  </head>
+  
+
+	
+  <body>
+    <div class="header-1">
+		<h3>&nbsp;&nbsp;<span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+		&nbsp;混凝土梁配筋计算</h3>
+    </div>
+  
+    <div class="container-fluid">
+	
+	<div class="col-sm-8 col-sm-offset-2">
+	<table class="table1">
+	  <col width="130px"/>
+        <tr>
+            <td><label for="M">设计弯矩（kN·m）</label></td>
+            <td><input type="number" id="M" class="form-control" placeholder="180"></td>
+        </tr>
+		
+		<tr>
+            <td><label for="h">截面高度（mm）</label></td>
+            <td><input type="number" id="h" class="form-control" placeholder="500">
+        </tr>
+		
+		<tr>
+            <td><label for="b">截面宽度（mm）</label></td>
+            <td><input type="number" id="b" class="form-control" placeholder="250">
+        </tr>
+		
+		<tr>
+            <td><label for="environment">环境类别</label></td>
+            <td>
+            <select id="environment" class="form-control">
+                <option value="1">一类</option>
+                <option value="2">二a类</option>
+			    <option value="3">二b类</option>
+                <option value="4">三a类</option>
+                <option value="5">三b类</option>
+             </select>
+ 			 </td>
+        </tr>
+		
+		<tr>
+            <td><label for="steelStr">钢筋强度等级</label></td>
+            <td>
+            <select id="steelStr" class="form-control">
+                <option value="270">Q300</option>
+			    <option value="300">Q335</option>
+                <option value="360">Q400</option>
+				<option value="435">Q500</option>
+             </select>
+			 </td>
+        </tr>
+		
+		<tr>
+            <td><label for="concreteStr">混凝土强度等级</label></td>
+            <td>
+			<form>
+            <select id="concreteStr" class="form-control">
+                <option value="10.0">C15</option>
+                <option value="13.4">C20</option>
+			    <option value="16.7">C25</option>
+                <option value="20.1" selected>C30</option>
+                <option value="23.4">C35</option>
+				<option value="26.8">C40</option>
+				<option value="29.6">C45</option>
+				<option value="32.4">C50</option>
+             </select>
+			 </td>
+        </tr>
+		
+		<tr>
+            <td><label>钢筋排数</label></td>
+            <td>
+			<label class="radio-inline">
+                 <input type="radio" name="rowOfSteel" value="1" checked>单排
+            </label>
+            <label class="radio-inline">
+                 <input type="radio" name="rowOfSteel" value="2">双排
+            </label>
+			</td>
+        </tr>
+		
+	</table>
+
+	</div>
+	
+	<div class="row">
+         <div class="col-sm-3 col-sm-offset-2 output" >
+		    <button type='button' onclick="add()" class="btn btn-primary btn-block">配筋计算</button>
+		 </div>
+         <div class="col-sm-5 output">
+		    <div class="input-group">
+            <div class="input-group-addon statement">所需钢筋截面面积为</div>
+                <input type="text" class="form-control" id="result">
+            <div class="input-group-addon statement">mm<sup>2</sup></div>
+            </div>
+		 </div>
+    </div>
+	
+	<br/>
+	
+	</div>
+	
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
